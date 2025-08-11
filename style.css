@@ -1,0 +1,221 @@
+/* --- Estilo base --- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box; /* importante para paddings e larguras */
+}
+
+header {
+    background-color: #303030;
+    color: #FFFFFF;
+}
+
+.Titulo-principal {
+    font-size: 60px;
+    padding: 206px 0px 50px 62px;
+}
+
+.paragrafo-principal {
+    font-size: 20px;
+    padding: 0px 0px 150px 62px;
+}
+
+.menu-informativo {
+    display: grid;
+    grid-auto-flow: column;
+    background-color: #F9F9F9;
+    text-align: left;
+    padding: 100px 0px 50px 175px;
+}
+
+.titulo-informativo {
+    font-size: 30px;
+}
+
+.paragrafo-informativo {
+    font-size: 20px;    
+}
+
+.menu-historia {
+    display: grid;
+    grid-auto-flow: column;
+    padding-top: 130px;
+}
+
+.historia {
+    padding: 200px 10px 0px 100px;
+}
+
+.titulo-historia {
+    font-size: 40px;
+}
+
+.paragrafo-historia {
+    font-size: 20px;
+    padding-top: 40px;
+}
+
+.menu-formulario {
+    background-color: #303030;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.titulo-formulario {
+    color: #F9F9F9;
+    font-size: 32px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+input {
+    height: 72px;
+    width: 512px;
+    max-width: 90%;
+    margin: 20px;
+    padding-left: 15px;
+    border: 0px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #0000004D;
+    font-size: 24px;
+}
+
+button {
+    background-color: #C07212;
+    color: #F9F9F9;
+    height: 74px;
+    width: 286px;
+    margin: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(-7px);
+    transition: 0.3s;
+    box-shadow: 0px 10px 20px #c8c3c3;
+    color: #dedede;
+}
+
+/* --- Responsividade --- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .Titulo-principal {
+        font-size: 48px;
+        padding: 150px 20px 30px 20px;
+        text-align: center;
+    }
+
+    .paragrafo-principal {
+        font-size: 18px;
+        padding: 0px 20px 100px 20px;
+        text-align: center;
+    }
+
+    .menu-informativo {
+        grid-auto-flow: row;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .menu-historia {
+        grid-auto-flow: row;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .historia {
+        padding: 50px 20px;
+        text-align: center;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    /* Forçar largura e ajustar padding para bg preencher */
+    header, .menu-informativo, .menu-formulario {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
+    .Titulo-principal {
+        font-size: 36px;
+        padding: 100px 10px 20px 10px;
+        text-align: center;
+    }
+
+    .paragrafo-principal {
+        font-size: 16px;
+        padding: 0px 10px 60px 10px;
+        text-align: center;
+    }
+
+    .titulo-informativo {
+        font-size: 24px;
+    }
+
+    .paragrafo-informativo {
+        font-size: 16px;
+    }
+
+    .titulo-historia {
+        font-size: 28px;
+    }
+
+    .paragrafo-historia {
+        font-size: 16px;
+    }
+
+    /* Imagens responsivas e centralizadas */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Empilhar colunas no mobile */
+    .menu-informativo,
+    .menu-historia {
+        grid-auto-flow: row;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    input {
+        height: 60px;
+        font-size: 18px;
+    }
+
+    button {
+        width: 220px;
+        font-size: 22px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .Titulo-principal {
+        font-size: 28px;
+        padding: 80px 10px 20px 10px;
+    }
+
+    .paragrafo-principal {
+        font-size: 14px;
+        padding: 0px 10px 40px 10px;
+    }
+
+    button {
+        width: 180px;
+        font-size: 18px;
+        margin: 30px;
+    }
+}
